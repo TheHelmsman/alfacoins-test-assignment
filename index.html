@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="icon" href="/favicon.ico" />
+    <title>allcoins-test-assignment</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <script src="/env.js"></script>
+    <script>
+      //  check environemnt
+      if (window && window.ENV === 'production') {
+        // supress console output
+        console.info = () => {};
+        console.log = () => {};
+        console.warn = () => {};
+        console.error = () => {};
+        function silentErrorHandler() {
+          return true;
+        }
+        window.onerror = silentErrorHandler;
+      }
+    </script>
+  </head>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
+  <body>
+    <noscript>
+      <strong>
+        We're sorry but this app doesn't work properly without JavaScript enabled. Please enable it to continue.
+      </strong>
+    </noscript>
+    <div id="app"></div>
+    <script type="module" src="./src/main.ts"></script>
+  </body>
+</html>
